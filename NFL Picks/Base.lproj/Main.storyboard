@@ -1,25 +1,234 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NFL_Picks" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Field Background" translatesAutoresizingMaskIntoConstraints="NO" id="pTu-mr-832">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFJ-OO-Ck5" userLabel="bucs">
+                                <rect key="frame" x="580" y="639" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="YA0-4X-OzY"/>
+                                </constraints>
+                                <state key="normal" image="buccs"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zF-ey-D4t" userLabel="cardinals">
+                                <rect key="frame" x="337" y="651" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Ggd-OL-FaB"/>
+                                </constraints>
+                                <state key="normal" image="cardinals"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMT-D3-0Bj" userLabel="cowboys">
+                                <rect key="frame" x="451" y="547" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="RFl-b5-sZd"/>
+                                </constraints>
+                                <state key="normal" image="cowboys"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibo-Rh-LUu" userLabel="eagles">
+                                <rect key="frame" x="0.0" y="494" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="RAE-dQ-mgw"/>
+                                    <constraint firstAttribute="width" constant="150" id="VbT-k0-pWY"/>
+                                </constraints>
+                                <state key="normal" image="eagles"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8M-a4-9K6" userLabel="falcons">
+                                <rect key="frame" x="153" y="608" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="fog-yQ-VaV"/>
+                                    <constraint firstAttribute="height" constant="150" id="pI1-Dq-GVx"/>
+                                </constraints>
+                                <state key="normal" image="falcons"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZc-uw-M4z" userLabel="giants">
+                                <rect key="frame" x="282" y="514" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Bc3-uL-rV5"/>
+                                    <constraint firstAttribute="width" constant="150" id="LRb-zH-uhn"/>
+                                </constraints>
+                                <state key="normal" image="giants"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1V-TF-EBQ" userLabel="greenbay">
+                                <rect key="frame" x="247" y="362" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="T8Z-z6-W1h"/>
+                                    <constraint firstAttribute="height" constant="150" id="rgu-Mp-XFt"/>
+                                </constraints>
+                                <state key="normal" image="greenbay"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEn-o5-Bey" userLabel="panthers">
+                                <rect key="frame" x="31" y="346" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ESc-Us-Sr1"/>
+                                    <constraint firstAttribute="width" constant="150" id="bJX-wR-aG6"/>
+                                </constraints>
+                                <state key="normal" image="panthers"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7a9-TM-Giy" userLabel="rams">
+                                <rect key="frame" x="142" y="463" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="5EG-rb-pnS"/>
+                                </constraints>
+                                <state key="normal" image="rams"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqs-s1-0ZD" userLabel="redskins">
+                                <rect key="frame" x="388" y="411" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="epA-Qs-kc2"/>
+                                    <constraint firstAttribute="width" constant="150" id="u3T-Kg-GNL"/>
+                                </constraints>
+                                <state key="normal" image="redskins"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSB-mr-6eu" userLabel="saints">
+                                <rect key="frame" x="464" y="733" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="F9t-fF-daC"/>
+                                </constraints>
+                                <state key="normal" image="saints"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DP6-kh-Na5" userLabel="seahawks">
+                                <rect key="frame" x="219" y="740" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="LQE-4N-h1A"/>
+                                </constraints>
+                                <state key="normal" image="seahawks"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCg-Az-Nsg" userLabel="vikings">
+                                <rect key="frame" x="7" y="646" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="VSP-ls-HSP"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="vikings"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xng-LN-DBZ" userLabel="lions">
+                                <rect key="frame" x="61" y="788" width="150" height="150"/>
+                                <state key="normal" image="lions"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bh8-rl-H7l" userLabel="49ners">
+                                <rect key="frame" x="609" y="494" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="drP-VZ-3uF"/>
+                                </constraints>
+                                <state key="normal" image="49ers"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czx-R9-CJh" userLabel="bears">
+                                <rect key="frame" x="533" y="362" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="csH-dK-zly"/>
+                                </constraints>
+                                <state key="normal" image="bears"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CSB-mr-6eu" firstAttribute="leading" secondItem="DP6-kh-Na5" secondAttribute="trailing" constant="95" id="0Dj-KQ-gsG"/>
+                            <constraint firstItem="CSB-mr-6eu" firstAttribute="top" secondItem="Bh8-rl-H7l" secondAttribute="bottom" constant="89" id="5Uc-Ad-f7Q"/>
+                            <constraint firstItem="pEn-o5-Bey" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="326" id="7Jp-vN-exT"/>
+                            <constraint firstItem="b1V-TF-EBQ" firstAttribute="leading" secondItem="pEn-o5-Bey" secondAttribute="trailing" constant="66" id="89R-LO-sAm"/>
+                            <constraint firstItem="b1V-TF-EBQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="342" id="96c-qg-6pV"/>
+                            <constraint firstItem="mMT-D3-0Bj" firstAttribute="leading" secondItem="nZc-uw-M4z" secondAttribute="trailing" constant="19" id="AFa-aG-Rp3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uFJ-OO-Ck5" secondAttribute="trailing" constant="18" id="AKL-2i-UlT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bh8-rl-H7l" secondAttribute="trailing" constant="-11" id="BQz-ig-CXc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CSB-mr-6eu" secondAttribute="bottom" constant="141" id="DCw-PK-YU1"/>
+                            <constraint firstItem="CSB-mr-6eu" firstAttribute="top" secondItem="mMT-D3-0Bj" secondAttribute="bottom" constant="36" id="DLH-Vu-dH3"/>
+                            <constraint firstItem="Ibo-Rh-LUu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="474" id="Euc-yL-MtD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HCg-Az-Nsg" secondAttribute="bottom" constant="228" id="HSr-5J-Asp"/>
+                            <constraint firstItem="Ibo-Rh-LUu" firstAttribute="top" secondItem="Bh8-rl-H7l" secondAttribute="top" id="I0q-bn-ljy"/>
+                            <constraint firstItem="HCg-Az-Nsg" firstAttribute="top" secondItem="Ibo-Rh-LUu" secondAttribute="bottom" constant="2" id="IXJ-K0-kE5"/>
+                            <constraint firstItem="Ibo-Rh-LUu" firstAttribute="bottom" secondItem="Bh8-rl-H7l" secondAttribute="bottom" id="NUR-qo-G2C"/>
+                            <constraint firstItem="z8M-a4-9K6" firstAttribute="top" secondItem="b1V-TF-EBQ" secondAttribute="bottom" constant="96" id="P4h-2G-m9Q"/>
+                            <constraint firstAttribute="trailing" secondItem="pTu-mr-832" secondAttribute="trailing" id="P7Q-ce-ELF"/>
+                            <constraint firstItem="nZc-uw-M4z" firstAttribute="top" secondItem="b1V-TF-EBQ" secondAttribute="bottom" constant="2" id="PuF-WO-dYH"/>
+                            <constraint firstItem="pTu-mr-832" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QIe-oE-ykP"/>
+                            <constraint firstItem="7a9-TM-Giy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="443" id="R3r-kp-TwK"/>
+                            <constraint firstItem="DP6-kh-Na5" firstAttribute="leading" secondItem="xng-LN-DBZ" secondAttribute="trailing" constant="8" symbolic="YES" id="Rhl-16-Mif"/>
+                            <constraint firstItem="1zF-ey-D4t" firstAttribute="leading" secondItem="z8M-a4-9K6" secondAttribute="trailing" constant="34" id="S6p-ks-eJc"/>
+                            <constraint firstItem="HCg-Az-Nsg" firstAttribute="top" secondItem="7a9-TM-Giy" secondAttribute="bottom" constant="33" id="Tl6-lv-AqT"/>
+                            <constraint firstItem="HCg-Az-Nsg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-13" id="UAC-C6-Tqp"/>
+                            <constraint firstItem="pEn-o5-Bey" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="UFo-BY-YfJ"/>
+                            <constraint firstItem="mMT-D3-0Bj" firstAttribute="top" secondItem="czx-R9-CJh" secondAttribute="bottom" constant="35" id="Ugy-4e-CFX"/>
+                            <constraint firstItem="b1V-TF-EBQ" firstAttribute="bottom" secondItem="czx-R9-CJh" secondAttribute="bottom" id="VLQ-U0-2ql"/>
+                            <constraint firstItem="xng-LN-DBZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="41" id="Wed-HV-GhJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DP6-kh-Na5" secondAttribute="bottom" constant="134" id="XxP-qA-dZQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xng-LN-DBZ" secondAttribute="bottom" constant="86" id="YGv-Dk-tkb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pTu-mr-832" secondAttribute="bottom" id="Z3G-vk-aUE"/>
+                            <constraint firstItem="Bh8-rl-H7l" firstAttribute="leading" secondItem="mMT-D3-0Bj" secondAttribute="trailing" constant="8" symbolic="YES" id="aIK-Sz-kxS"/>
+                            <constraint firstItem="uFJ-OO-Ck5" firstAttribute="leading" secondItem="1zF-ey-D4t" secondAttribute="trailing" constant="93" id="bXH-vh-8XE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uFJ-OO-Ck5" secondAttribute="bottom" constant="235" id="c6c-74-R3v"/>
+                            <constraint firstItem="fqs-s1-0ZD" firstAttribute="leading" secondItem="7a9-TM-Giy" secondAttribute="trailing" constant="96" id="dVX-yp-sco"/>
+                            <constraint firstItem="xng-LN-DBZ" firstAttribute="top" secondItem="z8M-a4-9K6" secondAttribute="bottom" constant="30" id="fcM-X6-8xf"/>
+                            <constraint firstItem="Bh8-rl-H7l" firstAttribute="leading" secondItem="fqs-s1-0ZD" secondAttribute="trailing" constant="71" id="gMP-kU-LsB"/>
+                            <constraint firstItem="z8M-a4-9K6" firstAttribute="leading" secondItem="Ibo-Rh-LUu" secondAttribute="trailing" constant="3" id="ify-Fb-FPN"/>
+                            <constraint firstItem="DP6-kh-Na5" firstAttribute="leading" secondItem="HCg-Az-Nsg" secondAttribute="trailing" constant="62" id="jEW-fa-4oI"/>
+                            <constraint firstItem="fqs-s1-0ZD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="391" id="jjK-IK-18d"/>
+                            <constraint firstItem="pTu-mr-832" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="mYt-Zb-iJh"/>
+                            <constraint firstItem="b1V-TF-EBQ" firstAttribute="top" secondItem="czx-R9-CJh" secondAttribute="top" id="mcx-lV-j1F"/>
+                            <constraint firstItem="Ibo-Rh-LUu" firstAttribute="leading" secondItem="pTu-mr-832" secondAttribute="leading" id="p9w-1F-OWi"/>
+                            <constraint firstItem="1zF-ey-D4t" firstAttribute="top" secondItem="fqs-s1-0ZD" secondAttribute="bottom" constant="90" id="tOm-Qk-MkS"/>
+                            <constraint firstItem="DP6-kh-Na5" firstAttribute="top" secondItem="nZc-uw-M4z" secondAttribute="bottom" constant="76" id="wBf-6C-RbP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1zF-ey-D4t" secondAttribute="bottom" constant="223" id="xoa-uc-nrx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="czx-R9-CJh" secondAttribute="trailing" constant="65" id="ywB-sk-bkd"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="bears" destination="czx-R9-CJh" id="wyF-Lh-Idy"/>
+                        <outlet property="bucs" destination="uFJ-OO-Ck5" id="Qhk-N3-olv"/>
+                        <outlet property="cardinals" destination="1zF-ey-D4t" id="7PJ-3O-mDr"/>
+                        <outlet property="cowboys" destination="mMT-D3-0Bj" id="Bkw-b2-2zw"/>
+                        <outlet property="eagles" destination="Ibo-Rh-LUu" id="TmS-bI-sUk"/>
+                        <outlet property="falcons" destination="z8M-a4-9K6" id="d9G-e4-Kuc"/>
+                        <outlet property="giants" destination="nZc-uw-M4z" id="cb2-BO-Rqg"/>
+                        <outlet property="greenbay" destination="b1V-TF-EBQ" id="RX3-MR-4Uo"/>
+                        <outlet property="lions" destination="xng-LN-DBZ" id="A7g-Fa-gWx"/>
+                        <outlet property="niners" destination="Bh8-rl-H7l" id="j7U-Ro-V7x"/>
+                        <outlet property="panthers" destination="pEn-o5-Bey" id="1Yy-g8-rBQ"/>
+                        <outlet property="rams" destination="7a9-TM-Giy" id="eE8-ot-6ii"/>
+                        <outlet property="redskins" destination="fqs-s1-0ZD" id="8bv-A1-VAr"/>
+                        <outlet property="saints" destination="CSB-mr-6eu" id="M9x-bR-ong"/>
+                        <outlet property="seahawks" destination="DP6-kh-Na5" id="MEU-iG-XW8"/>
+                        <outlet property="vikings" destination="HCg-Az-Nsg" id="d7E-c0-C2w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="299"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="49ers" width="262" height="262"/>
+        <image name="Field Background" width="2048" height="1536"/>
+        <image name="bears" width="262" height="262"/>
+        <image name="buccs" width="262" height="262"/>
+        <image name="cardinals" width="262" height="262"/>
+        <image name="cowboys" width="262" height="262"/>
+        <image name="eagles" width="262" height="262"/>
+        <image name="falcons" width="262" height="262"/>
+        <image name="giants" width="262" height="262"/>
+        <image name="greenbay" width="262" height="262"/>
+        <image name="lions" width="262" height="262"/>
+        <image name="panthers" width="262" height="262"/>
+        <image name="rams" width="262" height="262"/>
+        <image name="redskins" width="262" height="262"/>
+        <image name="saints" width="262" height="262"/>
+        <image name="seahawks" width="262" height="262"/>
+        <image name="vikings" width="262" height="262"/>
+    </resources>
 </document>
