@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0950AE1BB880DC00805A29 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0950AD1BB880DC00805A29 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3DF500C41BB74CE30042A31D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF500C31BB74CE30042A31D /* AppDelegate.swift */; };
 		3DF500C61BB74CE30042A31D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF500C51BB74CE30042A31D /* ViewController.swift */; };
 		3DF500C91BB74CE30042A31D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF500C71BB74CE30042A31D /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D0950AD1BB880DC00805A29 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3DF500C01BB74CE30042A31D /* NFL Picks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NFL Picks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF500C31BB74CE30042A31D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DF500C51BB74CE30042A31D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				3DF500C31BB74CE30042A31D /* AppDelegate.swift */,
+				3D0950AD1BB880DC00805A29 /* SignUpViewController.swift */,
 				3DF500C51BB74CE30042A31D /* ViewController.swift */,
 				3DF500C71BB74CE30042A31D /* Main.storyboard */,
 				3DF500CA1BB74CE30042A31D /* Assets.xcassets */,
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D0950AE1BB880DC00805A29 /* SignUpViewController.swift in Sources */,
 				3DF500C61BB74CE30042A31D /* ViewController.swift in Sources */,
 				3DF500C41BB74CE30042A31D /* AppDelegate.swift in Sources */,
 			);
@@ -483,6 +487,7 @@
 				3DF500EA1BB74CE30042A31D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DF500EB1BB74CE30042A31D /* Build configuration list for PBXNativeTarget "NFL PicksTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +496,7 @@
 				3DF500ED1BB74CE30042A31D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DF500EE1BB74CE30042A31D /* Build configuration list for PBXNativeTarget "NFL PicksUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +505,7 @@
 				3DF500F01BB74CE30042A31D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
