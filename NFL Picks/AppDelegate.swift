@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 //import AmazonS3RequestManager
 
 @UIApplicationMain
@@ -40,14 +41,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func postFile(sourcePath: String!, fileName: String!) {
-        amazonS3Manager.putObject(NSURL.fileURLWithPath(sourcePath)!, destinationPath: deviceID! + "/" + fileName)
-        let delayTime = dispatch_time(DISPATCH_TIME_NOW,
-            Int64(15 * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue()) {
-            NSFileManager.defaultManager().removeItemAtPath(sourcePath)
-        }
-    }
+//  Amazon //
+    
+//    func postFile(sourcePath: String!, fileName: String!) {
+//        amazonS3Manager.putObject(NSURL.fileURLWithPath(sourcePath)!, destinationPath: deviceID! + "/" + fileName)
+//        let delayTime = dispatch_time(DISPATCH_TIME_NOW,
+//            Int64(15 * Double(NSEC_PER_SEC)))
+//        dispatch_after(delayTime, dispatch_get_main_queue()) {
+//            NSFileManager.defaultManager().removeItemAtPath(sourcePath)
+//        }
+//    }
     
     func auth() {
         ref = Firebase(url:"https://nflpicks.firebaseio.com/")

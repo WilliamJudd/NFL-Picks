@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19468495340EE9720B5BD29B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78F151040E4F0543F87CD5B /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		3D0950AE1BB880DC00805A29 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0950AD1BB880DC00805A29 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3DF500C41BB74CE30042A31D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF500C31BB74CE30042A31D /* AppDelegate.swift */; };
-		3DF500C61BB74CE30042A31D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF500C51BB74CE30042A31D /* ViewController.swift */; };
+		3DF500C61BB74CE30042A31D /* NFCPicksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF500C51BB74CE30042A31D /* NFCPicksViewController.swift */; };
 		3DF500C91BB74CE30042A31D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF500C71BB74CE30042A31D /* Main.storyboard */; };
 		3DF500CB1BB74CE30042A31D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF500CA1BB74CE30042A31D /* Assets.xcassets */; };
 		3DF500CE1BB74CE30042A31D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF500CC1BB74CE30042A31D /* LaunchScreen.storyboard */; };
@@ -35,10 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17AA4EF6596204F02C4B1EBD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3D0950AD1BB880DC00805A29 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3DF500C01BB74CE30042A31D /* NFL Picks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NFL Picks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF500C31BB74CE30042A31D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DF500C51BB74CE30042A31D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3DF500C51BB74CE30042A31D /* NFCPicksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCPicksViewController.swift; sourceTree = "<group>"; };
 		3DF500C81BB74CE30042A31D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DF500CA1BB74CE30042A31D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DF500CD1BB74CE30042A31D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		3DF500DF1BB74CE30042A31D /* NFL PicksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NFL PicksUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF500E31BB74CE30042A31D /* NFL_PicksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFL_PicksUITests.swift; sourceTree = "<group>"; };
 		3DF500E51BB74CE30042A31D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5383F9AD198E6BEFE1782923 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D78F151040E4F0543F87CD5B /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19468495340EE9720B5BD29B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,8 @@
 				3DF500D71BB74CE30042A31D /* NFL PicksTests */,
 				3DF500E21BB74CE30042A31D /* NFL PicksUITests */,
 				3DF500C11BB74CE30042A31D /* Products */,
+				EA7919750384F6632F1BC320 /* Pods */,
+				54E7ECFB93987C365199D54F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,7 +108,7 @@
 			children = (
 				3DF500C31BB74CE30042A31D /* AppDelegate.swift */,
 				3D0950AD1BB880DC00805A29 /* SignUpViewController.swift */,
-				3DF500C51BB74CE30042A31D /* ViewController.swift */,
+				3DF500C51BB74CE30042A31D /* NFCPicksViewController.swift */,
 				3DF500C71BB74CE30042A31D /* Main.storyboard */,
 				3DF500CA1BB74CE30042A31D /* Assets.xcassets */,
 				3DF500CC1BB74CE30042A31D /* LaunchScreen.storyboard */,
@@ -128,6 +135,23 @@
 			path = "NFL PicksUITests";
 			sourceTree = "<group>";
 		};
+		54E7ECFB93987C365199D54F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D78F151040E4F0543F87CD5B /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA7919750384F6632F1BC320 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17AA4EF6596204F02C4B1EBD /* Pods.debug.xcconfig */,
+				5383F9AD198E6BEFE1782923 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DF500E81BB74CE30042A31D /* Build configuration list for PBXNativeTarget "NFL Picks" */;
 			buildPhases = (
+				C97D587247404085F0065DBE /* Check Pods Manifest.lock */,
 				3DF500BC1BB74CE30042A31D /* Sources */,
 				3DF500BD1BB74CE30042A31D /* Frameworks */,
 				3DF500BE1BB74CE30042A31D /* Resources */,
+				BDEE598F431B4914D7C93000 /* Embed Pods Frameworks */,
+				B49B5BDB1E0481DEB9BB44DC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,13 +280,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B49B5BDB1E0481DEB9BB44DC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDEE598F431B4914D7C93000 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C97D587247404085F0065DBE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3DF500BC1BB74CE30042A31D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3D0950AE1BB880DC00805A29 /* SignUpViewController.swift in Sources */,
-				3DF500C61BB74CE30042A31D /* ViewController.swift in Sources */,
+				3DF500C61BB74CE30042A31D /* NFCPicksViewController.swift in Sources */,
 				3DF500C41BB74CE30042A31D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +475,7 @@
 		};
 		3DF500E91BB74CE30042A31D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17AA4EF6596204F02C4B1EBD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "NFL Picks/Info.plist";
@@ -411,6 +487,7 @@
 		};
 		3DF500EA1BB74CE30042A31D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5383F9AD198E6BEFE1782923 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "NFL Picks/Info.plist";

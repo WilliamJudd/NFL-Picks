@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import CoreLocation
 
 class SignUpViewController: UIViewController {
 
@@ -29,8 +31,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var logoWidth: NSLayoutConstraint!
     @IBOutlet weak var logoHeight: NSLayoutConstraint!
     
-//    var recordRef: Firebase!
-//    let locationManager = CLLocationManager()
+    var recordRef: Firebase!
+    let locationManager = CLLocationManager() //?????
     var latitude: String!
     var longitude: String!
     var street: String!
@@ -92,48 +94,48 @@ class SignUpViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if segue.identifier == "picks" {
-            let cameraViewController = segue.destinationViewController as! CameraViewController
-            cameraViewController.recordRef = recordRef
-            cameraViewController.toRecipient = email.text
+            let nfcPicksViewController = segue.destinationViewController as! NFCPicksViewController
+            nfcPicksViewController.recordRef = recordRef
+            nfcPicksViewController.toRecipient = email.text
             resetForm(self)
         }
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        latitude = String(stringInterpolationSegment: manager.location.coordinate.latitude)
-        longitude = String(stringInterpolationSegment: manager.location.coordinate.longitude)
-        locationManager.stopUpdatingLocation()
-        CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: {(placemarks, error) -> Void in
-            if (error != nil) {
-                //                println("Reverse geocoder failed with error" + error.localizedDescription)
-                return
-            }
-            
-            
-            if placemarks.count > 0 {
-                let placemark = placemarks[0] as! CLPlacemark
-                self.street = placemark.thoroughfare
-                if placemark.subThoroughfare != nil {
-                    self.street = placemark.subThoroughfare + " " + self.street
-                }
-                self.city = placemark.locality
-                self.state = placemark.administrativeArea
-                self.postalCode = placemark.postalCode
-                self.country = placemark.country
-            } else {
-                print("Problem with the data received from geocoder")
-            }
-        })
-    }
+//    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        latitude = String(stringInterpolationSegment: manager.location.coordinate.latitude)
+//        longitude = String(stringInterpolationSegment: manager.location.coordinate.longitude)
+//        locationManager.stopUpdatingLocation()
+//        CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: {(placemarks, error) -> Void in
+//            if (error != nil) {
+//                //                println("Reverse geocoder failed with error" + error.localizedDescription)
+//                return
+//            }
+//            
+//            
+//            if placemarks.count > 0 {
+//                let placemark = placemarks[0] as! CLPlacemark
+//                self.street = placemark.thoroughfare
+//                if placemark.subThoroughfare != nil {
+//                    self.street = placemark.subThoroughfare + " " + self.street
+//                }
+//                self.city = placemark.locality
+//                self.state = placemark.administrativeArea
+//                self.postalCode = placemark.postalCode
+//                self.country = placemark.country
+//            } else {
+//                print("Problem with the data received from geocoder")
+//            }
+//        })
+//    }
     
     func validateForm() {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        firstNameCheck.alpha = firstName.text.characters.count > 1 ? 1 : 0
-        lastNameCheck.alpha = lastName.text.characters.count > 1 ? 1 : 0
+        firstNameCheck.alpha = firstName.text!.characters.count > 1 ? 1 : 0
+        lastNameCheck.alpha = lastName.text!.characters.count > 1 ? 1 : 0
         emailCheck.alpha = emailTest.evaluateWithObject(email.text) ? 1 : 0
-        companyCheck.alpha = company.text.characters.count > 1 ? 1 : 0
-        zipCodeCheck.alpha = zipCode.text.characters.count > 1 ? 1 : 0
+        companyCheck.alpha = company.text!.characters.count > 1 ? 1 : 0
+        zipCodeCheck.alpha = zipCode.text!.characters.count > 1 ? 1 : 0
         nextButton.enabled = firstNameCheck.alpha == 1 && lastNameCheck.alpha == 1 && emailCheck.alpha == 1 && companyCheck.alpha == 1 && zipCodeCheck.alpha == 1
     }
     
@@ -144,12 +146,12 @@ class SignUpViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        CameraManager.sharedInstance.addPreviewLayerToView(self.cameraContainerView)
+//        CameraManager.sharedInstance.addPreviewLayerToView(self.cameraContainerView)
         firstName.becomeFirstResponder()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
+//        locationManager.delegate = self
+//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//        locationManager.requestWhenInUseAuthorization()
+//        locationManager.startUpdatingLocation()
     }
     
     @IBAction func resetForm(sender: AnyObject) {
