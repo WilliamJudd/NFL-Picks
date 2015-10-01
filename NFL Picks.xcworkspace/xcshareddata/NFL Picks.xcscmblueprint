@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E81FDCC8E920B2EC4A06A319223E835F2B30383E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E81FDCC8E920B2EC4A06A319223E835F2B30383E" : 0,
+    "5A2CBAD5C7635A23AA56BF139F6C99A05507AC8F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C17EB4C4-FDE3-45F4-B618-85358B1E50F2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E81FDCC8E920B2EC4A06A319223E835F2B30383E" : "NFL%20Picks\/",
+    "5A2CBAD5C7635A23AA56BF139F6C99A05507AC8F" : "NFL%20Picks\/NFL%20Picks\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "NFL Picks",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "NFL Picks.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/WilliamJudd\/NFL-Picks.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5A2CBAD5C7635A23AA56BF139F6C99A05507AC8F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/WilliamJudd\/NFL-Picks.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E81FDCC8E920B2EC4A06A319223E835F2B30383E"
+    }
+  ]
+}
