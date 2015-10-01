@@ -11,6 +11,7 @@
 		3D0950AE1BB880DC00805A29 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0950AD1BB880DC00805A29 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3D0950B11BB9BECD00805A29 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0950B01BB9BECD00805A29 /* KDCircularProgress.swift */; settings = {ASSET_TAGS = (); }; };
 		3D0950B31BB9CA8500805A29 /* bubble.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D0950B21BB9CA8500805A29 /* bubble.mp3 */; settings = {ASSET_TAGS = (); }; };
+		3D0950B71BBB3B5200805A29 /* AFCPicksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0950B61BBB3B5200805A29 /* AFCPicksViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3DF500C41BB74CE30042A31D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF500C31BB74CE30042A31D /* AppDelegate.swift */; };
 		3DF500C61BB74CE30042A31D /* NFCPicksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF500C51BB74CE30042A31D /* NFCPicksViewController.swift */; };
 		3DF500C91BB74CE30042A31D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF500C71BB74CE30042A31D /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		3D0950AD1BB880DC00805A29 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		3D0950B01BB9BECD00805A29 /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 		3D0950B21BB9CA8500805A29 /* bubble.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bubble.mp3; sourceTree = "<group>"; };
+		3D0950B61BBB3B5200805A29 /* AFCPicksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFCPicksViewController.swift; sourceTree = "<group>"; };
 		3DF500C01BB74CE30042A31D /* NFL Picks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NFL Picks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF500C31BB74CE30042A31D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DF500C51BB74CE30042A31D /* NFCPicksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCPicksViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				3DF500C31BB74CE30042A31D /* AppDelegate.swift */,
 				3D0950AD1BB880DC00805A29 /* SignUpViewController.swift */,
 				3DF500C51BB74CE30042A31D /* NFCPicksViewController.swift */,
+				3D0950B61BBB3B5200805A29 /* AFCPicksViewController.swift */,
 				3D0950AF1BB9BE4200805A29 /* Circular Progress */,
 				3DF500C71BB74CE30042A31D /* Main.storyboard */,
 				3DF500CA1BB74CE30042A31D /* Assets.xcassets */,
@@ -236,6 +239,7 @@
 				TargetAttributes = {
 					3DF500BF1BB74CE30042A31D = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = UBNC2NGRMQ;
 					};
 					3DF500D31BB74CE30042A31D = {
 						CreatedOnToolsVersion = 7.0;
@@ -350,6 +354,7 @@
 			files = (
 				3D0950B11BB9BECD00805A29 /* KDCircularProgress.swift in Sources */,
 				3D0950AE1BB880DC00805A29 /* SignUpViewController.swift in Sources */,
+				3D0950B71BBB3B5200805A29 /* AFCPicksViewController.swift in Sources */,
 				3DF500C61BB74CE30042A31D /* NFCPicksViewController.swift in Sources */,
 				3DF500C41BB74CE30042A31D /* AppDelegate.swift in Sources */,
 			);
@@ -494,6 +499,7 @@
 			baseConfigurationReference = 17AA4EF6596204F02C4B1EBD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "NFL Picks/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Think-Jinues.NFL-Picks";
@@ -506,6 +512,7 @@
 			baseConfigurationReference = 5383F9AD198E6BEFE1782923 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "NFL Picks/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Think-Jinues.NFL-Picks";
