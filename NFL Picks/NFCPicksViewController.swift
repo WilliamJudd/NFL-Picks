@@ -13,6 +13,7 @@ import AssetsLibrary
 import MessageUI
 import AVFoundation
 
+
 class NFCPicksViewController: UIViewController {
     
 // Bubble Animation
@@ -46,10 +47,12 @@ class NFCPicksViewController: UIViewController {
     
 // Alert View
     var overlayView: UIView!
-    var alertView: UIView!
+//    var alertView: UIView!
+//    var alertView2: UIView!
+//    var button: UIButton!
+//    var button2: UIButton!
     var attachmentBehavior : UIAttachmentBehavior!
     var snapBehavior : UISnapBehavior!
-    
     
     @IBOutlet weak var circularProgressView: KDCircularProgress!
     @IBOutlet weak var bucs: UIButton!
@@ -75,11 +78,6 @@ class NFCPicksViewController: UIViewController {
     
     var nfcPicks: NSMutableArray = []
     
-   
-
-    
-    
-    
     
     override func viewDidLoad() {
     
@@ -88,7 +86,6 @@ class NFCPicksViewController: UIViewController {
         self.animator = UIDynamicAnimator(referenceView: self.view)
         circularProgressView.angle = 0
         createOverlay()
-        createAlert()
         
 
         
@@ -244,47 +241,93 @@ class NFCPicksViewController: UIViewController {
     
     func createOverlay() {
         // Create a gray view and set its alpha to 0 so it isn't visible
+        
         overlayView = UIView(frame: view.bounds)
         overlayView.backgroundColor = UIColor.grayColor()
         overlayView.alpha = 0.0
+        
+        let blur =  UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        let blurView  = UIVisualEffectView(effect: blur)
+        blurView.frame  = CGRectMake(0, 0, view.bounds.width, view.bounds.height)
+        blurView.alpha = 0.8
+        
+        
+        let vibrancyView: UIVisualEffectView = UIVisualEffectView(effect: UIVibrancyEffect(forBlurEffect: blur))
+        vibrancyView.frame  = CGRectMake(0, 0, view.bounds.width, view.bounds.height)
+
+        let overlayImage = UIImage(named: "overlayimage")!
+        let backgroundImageView = UIImageView(image: overlayImage)
+        backgroundImageView.frame = CGRectMake(0, 0, view.bounds.width, view.bounds.height)
+        
+        
         view.addSubview(overlayView)
-    }
+        overlayView.addSubview(backgroundImageView)
+        overlayView.addSubview(blurView)
+        blurView.contentView.addSubview(vibrancyView)
+        
+        
     
-    func createAlert() {
-        // Here the red alert view is created. It is created with rounded corners and given a shadow around it
-        let alertWidth: CGFloat = 450
-        let alertHeight: CGFloat = 375
-        let alertViewFrame: CGRect = CGRectMake(0, 0, alertWidth, alertHeight)
-        alertView = UIView(frame: alertViewFrame)
-        alertView.backgroundColor = UIColor.redColor()
-        alertView.alpha = 0.0
-        alertView.layer.cornerRadius = 10;
-        alertView.layer.shadowColor = UIColor.blackColor().CGColor;
-        alertView.layer.shadowOffset = CGSizeMake(0, 5);
-        alertView.layer.shadowOpacity = 0.3;
-        alertView.layer.shadowRadius = 10.0;
-        
-        // Create a button and set a listener on it for when it is tapped. Then the button is added to the alert view
+    
         let button = UIButton(type: UIButtonType.System) as UIButton
-        button.setTitle("Dismiss", forState: UIControlState.Normal)
-        button.backgroundColor = UIColor.whiteColor()
-        
-        button.frame = CGRectMake(0, 0, alertWidth, 40.0)
-        button.layer.cornerRadius = 2
+        button.setTitle("Pick Again", forState: UIControlState.Normal)
+        button.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
+        button.titleLabel?.font = UIFont(name: "Georgia-BoldItalic", size: 30)
+        button.titleLabel?.layer.shadowColor = UIColor.redColor().CGColor
+        button.titleLabel?.layer.shadowRadius = 4
+        button.titleLabel?.layer.shadowOpacity = 0.9
+        button.titleLabel?.layer.shadowOffset = CGSizeZero
+        button.titleLabel?.layer.masksToBounds = false
+        button.backgroundColor = UIColor.blueColor()
+        button.frame = CGRectMake(500, view.bounds.height / 2 - 50, 300, 50)
+        button.layer.cornerRadius = 10
         button.addTarget(self, action: Selector("dismissAlert"), forControlEvents: UIControlEvents.TouchUpInside)
         
         
         let button2 = UIButton(type: UIButtonType.System) as UIButton
         button2.setTitle("Pick AFC", forState: UIControlState.Normal)
-        button2.backgroundColor = UIColor.whiteColor()
+        button2.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        button2.titleLabel?.font = UIFont(name: "Georgia-BoldItalic", size: 30)
+        button2.titleLabel?.layer.shadowColor = UIColor.grayColor().CGColor
+        button2.titleLabel?.layer.shadowRadius = 4
+        button2.titleLabel?.layer.shadowOpacity = 0.9
+        button2.titleLabel?.layer.shadowOffset = CGSizeZero
+        button2.titleLabel?.layer.masksToBounds = false
+        button2.backgroundColor = UIColor.redColor()
+        button2.frame = CGRectMake(-500, view.bounds.height / 2 + 50, 300, 50)
+        button2.layer.cornerRadius = 10
         button2.addTarget(self, action: Selector("afcPicks"), forControlEvents: UIControlEvents.TouchUpInside)
-        button2.frame = CGRectMake(0, 135, alertWidth, 40.0)
-        button2.layer.cornerRadius = 2
-        button2
-        alertView.addSubview(button)
-        alertView.addSubview(button2)
-        view.addSubview(alertView)
+        //
+        
+        
+        vibrancyView.contentView.addSubview(button)
+        vibrancyView.contentView.addSubview(button2)
+        
+        
+        let snapBehaviour: UISnapBehavior = UISnapBehavior(item: button, snapToPoint: CGPointMake(view.bounds.width / 2, view.bounds.height / 2 - 50))
+        snapBehaviour.damping = 0.9
+        
+        
+        let snapBehaviour2: UISnapBehavior = UISnapBehavior(item: button2, snapToPoint: CGPointMake(view.bounds.width / 2, view.bounds.height / 2 + 50))
+        snapBehaviour2.damping = 0.9
+        
+        
+        let slowDown: UIDynamicItemBehavior = UIDynamicItemBehavior(items: [button,button2])
+        
+        //
+        slowDown.resistance = 10
+        slowDown.density = 0
+        
+        
+        
+        animator.addBehavior(slowDown)
+        animator.addBehavior(snapBehaviour)
+        animator.addBehavior(snapBehaviour2)
+    
+    
+    
     }
+    
+
 
     
     
@@ -294,33 +337,23 @@ class NFCPicksViewController: UIViewController {
         // When the alert view is dismissed, I destroy it, so I check for this condition here
         // since if the Show Alert button is tapped again after dismissing, alertView will be nil
         // and so should be created again
-        if (alertView == nil) {
-            createAlert()
-        }
-        
-        
+//        if (button == nil) {
+//            alertButtons()
+//        }
         
         animator.removeAllBehaviors()
         
-        // Animate in the overlay
-        UIView.animateWithDuration(0.4) {
+        UIView.animateWithDuration(0.6) {
             self.overlayView.alpha = 1.0
+        
         }
         
-        // Animate the alert view using UIKit Dynamics.
-        alertView.alpha = 1.0
         
-        let snapBehaviour: UISnapBehavior = UISnapBehavior(item: alertView, snapToPoint: view.center)
-        animator.addBehavior(snapBehaviour)
     }
     
     
  
-    func afcPicks () {
-        
-        performSegueWithIdentifier("afcpicks", sender: self)
-        
-        }
+
     
     
     
@@ -328,53 +361,78 @@ class NFCPicksViewController: UIViewController {
 
     func dismissAlert() {
         
+        let button = UIButton(type: UIButtonType.System) as UIButton
+        button.setTitle("Pick Again", forState: UIControlState.Normal)
+        button.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
+        button.titleLabel?.font = UIFont(name: "Georgia-BoldItalic", size: 30)
+        button.titleLabel?.layer.shadowColor = UIColor.redColor().CGColor
+        button.titleLabel?.layer.shadowRadius = 4
+        button.titleLabel?.layer.shadowOpacity = 0.9
+        button.titleLabel?.layer.shadowOffset = CGSizeZero
+        button.titleLabel?.layer.masksToBounds = false
+        button.backgroundColor = UIColor.blueColor()
+        button.frame = CGRectMake(0, 0, 300, 50)
+        button.layer.cornerRadius = 10
+        button.addTarget(self, action: Selector("dismissAlert"), forControlEvents: UIControlEvents.TouchUpInside)
+        button.alpha = 0
+        
+        
+        let button2 = UIButton(type: UIButtonType.System) as UIButton
+        button2.setTitle("Pick AFC", forState: UIControlState.Normal)
+        button2.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        button2.titleLabel?.font = UIFont(name: "Georgia-BoldItalic", size: 30)
+        button2.titleLabel?.layer.shadowColor = UIColor.grayColor().CGColor
+        button2.titleLabel?.layer.shadowRadius = 4
+        button2.titleLabel?.layer.shadowOpacity = 0.9
+        button2.titleLabel?.layer.shadowOffset = CGSizeZero
+        button2.titleLabel?.layer.masksToBounds = false
+        button2.backgroundColor = UIColor.redColor()
+        button2.frame = CGRectMake(0, 0, 300, 50)
+        button2.layer.cornerRadius = 10
+        button2.addTarget(self, action: Selector("afcPicks"), forControlEvents: UIControlEvents.TouchUpInside)
+        button2.alpha = 0
+        
+        view.addSubview(button)
+        view.addSubview(button2)
         animator.removeAllBehaviors()
         
-        let gravityBehaviour: UIGravityBehavior = UIGravityBehavior(items: [alertView])
+        let gravityBehaviour: UIGravityBehavior = UIGravityBehavior(items: [button,button2])
         gravityBehaviour.gravityDirection = CGVectorMake(0.0, 10.0);
         animator.addBehavior(gravityBehaviour)
         
-        // This behaviour is included so that the alert view tilts when it falls, otherwise it will go straight down
-        let itemBehaviour: UIDynamicItemBehavior = UIDynamicItemBehavior(items: [alertView])
-        itemBehaviour.addAngularVelocity(CGFloat(-M_PI_2), forItem: alertView)
+       
+        let itemBehaviour: UIDynamicItemBehavior = UIDynamicItemBehavior(items: [button,button2])
+        itemBehaviour.addAngularVelocity(CGFloat(-M_PI_2), forItem: button)
+        itemBehaviour.addAngularVelocity(CGFloat(-M_PI_2), forItem: button2)
         animator.addBehavior(itemBehaviour)
         
-        // Animate out the overlay, remove the alert view from its superview and set it to nil
-        // If you don't set it to nil, it keeps falling off the screen and when Show Alert button is
-        // tapped again, it will snap into view from below. It won't have the location settings we defined in createAlert()
-        // And the more it 'falls' off the screen, the longer it takes to come back into view, so when the Show Alert button
-        // is tapped again after a considerable time passes, the app seems unresponsive for a bit of time as the alert view
-        // comes back up to the screen
+       
         UIView.animateWithDuration(0.4, animations: {
             self.overlayView.alpha = 0.0
             }, completion: {
                 (value: Bool) in
-                self.alertView.removeFromSuperview()
-                self.alertView = nil
-    
+                button.removeFromSuperview()
+                button2.removeFromSuperview()
+               
+        self.currentCount = 0
+        self.circularProgressView.animateFromAngle(self.circularProgressView.angle, toAngle: 0, duration: 0.5, completion: nil)
+
                 
         })
         
     }
-        
+    
 
     
     
     
     @IBAction func teamProgressButtonTapped(sender: UIButton) {
         
-        
-     
-            
-        
-        print(nfcPicks)
-        
-        
         // add or subtract button to/from array
         // do circle progress animation
         // check to see if we've reached max count compared to array size
         // if maxcount is reached, throw up alert
-        if currentCount != (maxCount) {
+        if  currentCount != (maxCount) {
             currentCount += 1
             let newAngleValue = newAngle()
             circularProgressView.animateToAngle(newAngleValue, duration: 0.5, completion: nil)
@@ -399,9 +457,24 @@ class NFCPicksViewController: UIViewController {
         return Int(360 * (currentCount / maxCount))
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    func afcPicks () {
+        
+        performSegueWithIdentifier("afcpicks", sender: self)
+        
+    }
+    
 //    @IBAction func resetButtonTapped(sender: UIButton) {
-//        currentCount = 0
-//        circularProgressView.animateFromAngle(circularProgressView.angle, toAngle: 0, duration: 0.5, completion: nil)
 //    }
   
 }

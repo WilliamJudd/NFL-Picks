@@ -12,6 +12,7 @@
 		3D0950B11BB9BECD00805A29 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0950B01BB9BECD00805A29 /* KDCircularProgress.swift */; settings = {ASSET_TAGS = (); }; };
 		3D0950B31BB9CA8500805A29 /* bubble.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3D0950B21BB9CA8500805A29 /* bubble.mp3 */; settings = {ASSET_TAGS = (); }; };
 		3D0950B71BBB3B5200805A29 /* AFCPicksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0950B61BBB3B5200805A29 /* AFCPicksViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3D2DA4401BBE0EA1006AFD8A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2DA43F1BBE0EA0006AFD8A /* QuartzCore.framework */; };
 		3DF500C41BB74CE30042A31D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF500C31BB74CE30042A31D /* AppDelegate.swift */; };
 		3DF500C61BB74CE30042A31D /* NFCPicksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF500C51BB74CE30042A31D /* NFCPicksViewController.swift */; };
 		3DF500C91BB74CE30042A31D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF500C71BB74CE30042A31D /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		3D0950B01BB9BECD00805A29 /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 		3D0950B21BB9CA8500805A29 /* bubble.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bubble.mp3; sourceTree = "<group>"; };
 		3D0950B61BBB3B5200805A29 /* AFCPicksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFCPicksViewController.swift; sourceTree = "<group>"; };
+		3D2DA43F1BBE0EA0006AFD8A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3DF500C01BB74CE30042A31D /* NFL Picks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NFL Picks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF500C31BB74CE30042A31D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DF500C51BB74CE30042A31D /* NFCPicksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCPicksViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2DA4401BBE0EA1006AFD8A /* QuartzCore.framework in Frameworks */,
 				19468495340EE9720B5BD29B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +158,7 @@
 		54E7ECFB93987C365199D54F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D2DA43F1BBE0EA0006AFD8A /* QuartzCore.framework */,
 				D78F151040E4F0543F87CD5B /* Pods.framework */,
 			);
 			name = Frameworks;
